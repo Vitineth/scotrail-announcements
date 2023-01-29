@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  min-height: 100%;
+  min-width: 100%;
+  background: #2c3e50;
+  color: white;
+  font-family: sans-serif;
+}
+
+.player {
+  display: none;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.container > .upper {
+  padding: 30px;
+}
+
+.search input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5em;
+  border: none;
+  color: white;
+  outline: none;
+  background: #212e3b;
+  border-bottom: 4px solid #4774a0;
+}
+
+.card {
+  background: #212e3b;
+  flex-basis: 23%;
+  margin-bottom: 10px;
+}
+
+.card .upper {
+  padding: 20px 10px;
+}
+
+.card .lower {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
+
+.box-button{
+  border: none;
+  padding: 10px;
+  background: #4774a0;
+  color: white;
+  cursor: pointer;
+}
+
+.box-button:disabled{
+    background: #6f7f8f;
+  cursor: initial;
+}
+
+.card .lower button {
+  flex-grow: 1;
+  border-right: 1px solid #2c3e50;
+  border-top: 3px solid #2c3e50;
+}
+
+.card .lower button:last-child {
+  border-right: none;
+}
+
+#cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #212e3b;
+  padding: 10px;
+}
+
+.player .name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.player button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+}
+
+.player button img {
+  filter: invert(1);
+}
+
+.player button #pause {
+  display: none;
+}
+
+@media screen and (max-width: 1900px) {
+  .container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .container {
+    width: 90%;
+  }
+
+  .card {
+    flex-basis: 32%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .card {
+    flex-basis: 100%;
+  }
+}
+
+.builder {
+  border: 1px solid #212e3b;
+  padding: 20px;
+}
+
+.builder .entry {
+  padding: 20px;
+  background: #212e3b;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+.builder .entry button {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #4774a0;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  color: white;
+  cursor: pointer;
+}

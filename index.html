@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scotrail Clip Soundboard</title>
+    <link href="index.css" rel="stylesheet" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"
+      integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="container">
+      <div class="upper">
+        <h1 style="text-align: center">ScotRail Announcements</h1>
+        <div class="search">
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div style="padding: 10px 0;">
+          <input type="checkbox" id="builder" />
+          Enable Builder Tools
+        </div>
+        <div id="builder-tools" style="display: none">
+          <div class="builder" id="builder-clips">
+          </div>
+          <button id="builder-play" class="box-button" style="margin-top: 10px; width: 100%">
+            Play
+          </button>
+        </div>
+      </div>
+      <div class="lower" id="cards">
+      </div>
+    </div>
+
+    <div class="player" id="player">
+      <div class="name" id="player-name">
+        The file that is currently playing
+      </div>
+      <div class="controls">
+        <button class="play" id="play-pause-button">
+          <img id="play" src="play.svg" />
+          <img id="pause" src="pause.svg" />
+        </button>
+        <button class="stop" id="stop-button">
+          <img src="stop.svg" />
+        </button>
+      </div>
+    </div>
+
+    <script src="index.js" defer></script>
+  </body>
+</html>
