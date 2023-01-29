@@ -168,3 +168,11 @@ html {
   color: white;
   cursor: pointer;
 }
+
+p.subtitle{
+  text-align: center;
+}
+
+a:visited{
+  color: rgb(180, 173, 173);
+}
